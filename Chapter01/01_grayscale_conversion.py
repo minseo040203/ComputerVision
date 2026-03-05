@@ -1,6 +1,5 @@
 import cv2                      # OpenCV 라이브러리 불러오기 (이미지 처리용)
 import matplotlib.pyplot as plt # matplotlib 라이브러리 불러오기 (이미지 시각화용)
-import os
 
 # 이미지 불러오기
 img = cv2.imread('girl_laughing.jpg')  # 현재 폴더에 있는 girl_laughing.jpg 파일을 읽어와서 img 변수에 저장
