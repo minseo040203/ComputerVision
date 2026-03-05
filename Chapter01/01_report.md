@@ -91,4 +91,4 @@
 4. 실행 후 `image_gray.jpg` 파일이 생성되는지 확인.
 
 ## 결과
-![alt text](image.png)![alt text](image_gray.png)
+![alt text](girl_laughing.jpg)![alt text](image_gray.jpg)
