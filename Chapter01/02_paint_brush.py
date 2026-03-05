@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import os
 
 # 전역 변수
 drawing = False
@@ -26,8 +27,12 @@ def mouse_event(event, x, y, flags, param):
 def main():
     global img, img_copy, brush_size, brush_color
     
+    # 현재 파일의 디렉토리 경로 가져오기
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    image_path = os.path.join(current_dir, 'girl_laughing.jpg')
+    
     # 이미지 불러오기
-    img = cv2.imread('girl_laughing.jpg')
+    img = cv2.imread(image_path)
     
     if img is None:
         print("이미지를 불러올 수 없습니다.")
@@ -92,8 +97,9 @@ def main():
             break
     
     # 결과 이미지 저장
-    cv2.imwrite('painting_result.jpg', img)
-    print("결과 이미지가 'painting_result.jpg'로 저장되었습니다.")
+    result_path = os.path.join(current_dir, 'painting_result.jpg')
+    cv2.imwrite(result_path, img)
+    print(f"결과 이미지가 '{result_path}'로 저장되었습니다.")
     
     cv2.destroyAllWindows()
 
